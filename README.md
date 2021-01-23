@@ -1,10 +1,14 @@
-# PRONOTE-API--unofficial
- PRONOTE unofficial API
+# PRONOTE-API
+## API non-officiel pour le site Pronote
 
-Tutoriel:
+### Comment utiliser l'API ?
 
-Mettez l'url Pronote de votre école ainsi que votre nom d'utilisateur et mot de passe Pronote dans les variables d'environnement de votre serveur.
+Afin d'utiliser cette API Pronote, faites simplement une 
+```GET```
+request en incluant dans l'url les paramètres suivant:
 
-Executez le code en utilisant la commande ```npm run start```.
+```http://localhost:3000/?username=<votre_nom_d_utlisateur_pronote>&password=<votre_mot_de_passe_pronote>&link=<lien_du_formulaire_de_connection_eleve_de_votre_etablissement>```
 
-Puis, allez à l'url ```http://localhost:8080/```, et vous devriez avoir comme réponse un fichier JSON contenant toutes les informations sur votr compte Google (moyennes, devoirs...).
+Si vous rentrez bien les bon paramètres, une réponse contenant un fichier JSON vous sera renvoyé. Ce dernier possèdera un grand nombre de données (notes, moyennes, punitions, devoirs...).
+
+
