@@ -9,7 +9,7 @@ puppeteer.use(StealthPlugin());
 
 puppeteer.use(require('puppeteer-extra-plugin-anonymize-ua')());
 
-const get_user_data = async() => {
+const get_user_data = async(username, password, link) => {
 
     console.log(chalk.yellowBright('API GET method...'));
 
@@ -20,17 +20,17 @@ const get_user_data = async() => {
 
     console.log(chalk.yellow('Browser launched...'));
 
-    await page.goto(process.env.PRONOTE_LINK);
+    await page.goto(link);
     await page.waitForSelector('input[type=text]');
 
     console.log(chalk.greenBright('On pronote...'));
 
-    await login(page);
+    await login(page, username, password);
 
-    const average = await get_user_average(page);
+    const average = await get_user_average(page, username);
 
     const averages = {};
-    averages['Moyennes Matières'] = await get_user_grades(page);
+    averages['Moyennes Matières Elève'] = await get_user_grades(page, username);
 
     await browser.close();
 
@@ -39,16 +39,16 @@ const get_user_data = async() => {
     return data;
 };
 
-const login = async(page) => {
-    await page.type('input[type=text]', process.env.PRONOTE_USERNAME);
-    await page.type('input[type=password]', process.env.PRONOTE_PASSWORD);
+const login = async(page, username, password) => {
+    await page.type('input[type=text]', username);
+    await page.type('input[type=password]', password);
 
     await page.click('#id_39');
 
-    console.log(chalk.greenBright(`Logged in with ${process.env.PRONOTE_USERNAME} account...`));
+    console.log(chalk.greenBright(`Logged in with ${username} account...`));
 }
 
-const get_user_average = async(page) => {
+const get_user_average = async(page, username) => {
     console.log(chalk.yellowBright('Starting new process...'));
 
     await page.waitForSelector('#id_107id_64');
@@ -61,7 +61,7 @@ const get_user_average = async(page) => {
 
     let user_average_parsed = user_average.substring(0, user_average.length - 4);
 
-    console.log(chalk.green(`Average retrieved from ${process.env.PRONOTE_USERNAME} (` + chalk.red.bold(`${user_average_parsed}/20`) + `)...`));
+    console.log(chalk.green(`Average retrieved from ${username} (` + chalk.red.bold(`${user_average_parsed}/20`) + `)...`));
 
     let user_average_parsed_object = {};
     user_average_parsed_object['Moyenne Générale'] = user_average_parsed;
@@ -71,7 +71,7 @@ const get_user_average = async(page) => {
     return user_average_parsed_object;
 }
 
-const get_user_grades = async(page) => {
+const get_user_grades = async(page, username) => {
     console.log(chalk.yellowBright('Starting new process...'));
 
     await page.waitForXPath('/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/table/tbody/tr[8]/td[2]/div/div/div/div/div/div[2]');
