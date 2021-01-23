@@ -63,7 +63,8 @@ const get_user_average = async(page, username) => {
     await page.waitForSelector('#id_107id_64');
     await page.click('#id_107id_64');
 
-    await page.waitForXPath('/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span');
+    // await page.waitForXPath('/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span');
+    await page.waitFor(300);
 
     const user_average_element = await page.$x("/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span");
     let user_average = await page.evaluate(el => el.textContent, user_average_element[0]);
