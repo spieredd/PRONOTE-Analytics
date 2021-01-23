@@ -4,7 +4,7 @@ const app = express();
 
 const get_user_data = require('./scraping_bot');
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     // let username = process.env.PRONOTE_USERNAME;
