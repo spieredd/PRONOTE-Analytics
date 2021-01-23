@@ -1,0 +1,33 @@
+{
+    "name": "PRONOTE-API--unofficial",
+    "version": "1.0.0",
+    "description": "PRONOTE unofficial API",
+    "main": "server.js",
+    "scripts": {
+        "devStart": "nodemon server.js",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/science-math-guy/PRONOTE-API--unofficial.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/science-math-guy/PRONOTE-API--unofficial/issues"
+    },
+    "homepage": "https://github.com/science-math-guy/PRONOTE-API--unofficial#readme",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "puppeteer": "^5.5.0",
+        "puppeteer-extra": "^3.1.16",
+        "puppeteer-extra-plugin-anonymize-ua": "^2.2.15",
+        "puppeteer-extra-plugin-stealth": "^2.6.6"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
