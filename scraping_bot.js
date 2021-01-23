@@ -27,7 +27,14 @@ const get_user_data = async(username, password, link) => {
 
     console.log(chalk.greenBright('On pronote...'));
 
-    await login(page, username, password);
+    try {
+        await login(page, username, password);
+    } catch (error) {
+        throw error;
+        return 'Error during login.'
+    }
+
+    console.log('logged in')
 
     const average = await get_user_average(page, username);
 
