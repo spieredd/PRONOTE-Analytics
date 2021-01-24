@@ -26,7 +26,7 @@ Non. Pour l'instant aucune donnée n'est enregistrée. Vous pouvez aller le code
 
 Toutefois, il est prévu de sauvegarder le nom d'utilisateur seulement dans une base de donnée dans le but de controler le nombre de requests que chaque utilisateur fait.
  
-## Vous ne souhaitez tout de même pas que vos mots de passe et identifiant passent par nos serveurs ? Pas de problème !
+## Vous ne souhaitez tout de même pas que vos mots de passe et identifiants passent par nos serveurs ? Pas de problème !
 
 Vous pouvez aussi faire tourner le code sur votre propre machine.
 
@@ -50,6 +50,25 @@ Oui. Ce projet de créer une API pour le site web de Pronote est encore récent.
 
 L'API va donc être énormément updaté pendant ces prochains jours.
 
+## Quelles technologies furent-utilisés ?
+
+### Langages:
+
+- JavaScript (NodeJS)
+- HTML
+- CSS
+
+### NPM packages
+
+- Express
+- Dotenv
+- Chalk
+- Puppeteer
+- Puppeteer-extra
+- Puppeteer-extra-plugin-stealth
+- Puppeteer-extra-plugin-anonymize-ua
+
+- Nodemon (dev dependency)
 
 
 
