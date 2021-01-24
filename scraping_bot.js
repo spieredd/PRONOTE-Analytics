@@ -98,7 +98,7 @@ const get_user_grades = async(page, username) => {
     for (let i = 1; i <= number_of_rows; i++) {
         subject_xpath = await page.$x(`/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/table/tbody/tr[${i}]/td[2]/div/div/div/div/div/div[2]`);
         subject = await page.evaluate(el => el.textContent, subject_xpath[0]);
-        if (subject.includes('/') || subject.includes("Aujourd'hui")) {
+        if (subject.includes('/') || subject.includes("Aujourd'hui") || subject.includes("Hier")) {
             continue;
         } else {
             subjects.push(subject);
