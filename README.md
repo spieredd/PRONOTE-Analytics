@@ -13,6 +13,25 @@ Si vous rentrez bien les bon paramètres, une réponse contenant un fichier JSON
 
 (Le fichier JSON envoyé est pour l'instant assez peu fourni. Toutefois, pas d'inquiétudes il sera bientôt complet)
 
+### Vous ne souhaitez pas que vos mots de passe et identifiant passe par nos serveurs ? Pas de problème !
+
+Vous pouvez aussi faire tourner le code sur votre propre machine.
+
+Pour cela ouvrez votre terminal et clonez notre repertoire en entrant la commande suivante:
+
+```git clone https://github.com/science-math-guy/PRONOTE-API.git```
+
+Afin de faire 'executer' le code, entrez la commande suivante:
+
+```node server.js```
+
+Puis rendez-vous sur votre navigateur et entrez l'url suivante en remplaçant bien les paramètres par les votres:
+
+```http://localhost:3000/?username=<votre_nom_d_utlisateur_pronote>&password=<votre_mot_de_passe_pronote>&link=<lien_du_formulaire_de_connection_eleve_de_votre_etablissement>```
+
+Le code est donc directement tourné sur votre ordinateur et vos mots de passe et identifiants ne sont donc pas envoyé sur d'autre serveurs.
+
+
 
 
 
