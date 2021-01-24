@@ -15,6 +15,10 @@ Si vous rentrez bien les bon paramètres, une réponse contenant un fichier JSON
 
 ### Vous ne souhaitez pas que vos mots de passe et identifiant passe par nos serveurs ? Pas de problème !
 
+( Je vous assure tout de même qu'aucune donnée que ce soit mots de passe, identifiants, notes... n'est sauvegardez. Gardez à l'esprit que nos serveurs heroku sont directement connectés à la branche 
+```main```
+de ce répository. Vous pouvez donc allez vérifier le code par vous-même.)
+
 Vous pouvez aussi faire tourner le code sur votre propre machine.
 
 Pour cela ouvrez votre terminal et clonez notre repertoire en entrant la commande suivante:
