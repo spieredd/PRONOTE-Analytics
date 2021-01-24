@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.static('frontend'));
+
 const get_user_data = require('./scraping_bot');
 
 const port = process.env.PORT || 3000;
@@ -22,8 +24,8 @@ app.get('/', (req, res) => {
                 res.json(user_data);
             });
     } else {
-        res.send('Missing parameter(s).')
-        res.end();
+        console.log("No parameter")
+        res.sendFile(__dirname + '/frontend/error.html');
     }
 });
 
