@@ -23,8 +23,8 @@ Non. Pour l'instant aucune donnée n'est enregistrée. Vous pouvez aller le code
 ```main``` si vous en êtes pas sûr. Cette dernière est en effet directement connectée à notre serveur Heroku.
 
 Toutefois, il est prévu de sauvegarder le nom d'utilisateur seulement dans une base de donnée dans le but de controler le nombre de requests que chaque utilisateur fait.
-
-## Vous ne souhaitez pas tout de même pas que vos mots de passe et identifiant passent par nos serveurs ? Pas de problème !
+ 
+## Vous ne souhaitez tout de même pas que vos mots de passe et identifiant passent par nos serveurs ? Pas de problème !
 
 Vous pouvez aussi faire tourner le code sur votre propre machine.
 
