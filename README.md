@@ -17,11 +17,14 @@ Si vous rentrez bien les bon paramètres, une réponse contenant un fichier JSON
 
 (Le fichier JSON envoyé est pour l'instant assez peu fourni. Toutefois, pas d'inquiétudes il sera bientôt complet)
 
-## Vous ne souhaitez pas que vos mots de passe et identifiant passe par nos serveurs ? Pas de problème !
+## Mes données (mot de passe, identifiant...) sont-ils enregistrées quelque part ?
 
-( Je vous assure tout de même qu'aucune donnée que ce soit mots de passe, identifiants, notes... n'est sauvegardez. Gardez à l'esprit que nos serveurs heroku sont directement connectés à la branche 
-```main```
-de ce répository. Vous pouvez donc allez vérifier le code par vous-même.)
+Non. Pour l'instant aucune donnée n'est enregistrée. Vous pouvez aller le code de la branche 
+```main``` si vous en êtes pas sûr. Cette dernière est en effet directement connectée à notre serveur Heroku.
+
+Toutefois, il est prévu de sauvegarder le nom d'utilisateur seulement dans une base de donnée dans le but de controler le nombre de requests que chaque utilisateur fait.
+
+## Vous ne souhaitez pas tout de même pas que vos mots de passe et identifiant passent par nos serveurs ? Pas de problème !
 
 Vous pouvez aussi faire tourner le code sur votre propre machine.
 
@@ -38,6 +41,14 @@ Puis rendez-vous sur votre navigateur et entrez l'url suivante en remplaçant bi
 ```http://localhost:3000/?username=<votre_nom_d_utlisateur_pronote>&password=<votre_mot_de_passe_pronote>&link=<lien_du_formulaire_de_connection_eleve_de_votre_etablissement>```
 
 Le code est donc directement tourné sur votre ordinateur et vos mots de passe et identifiants ne sont donc pas envoyé sur d'autre serveurs.
+
+## Allez-vous rajoutez plus de données dans le fichier JSON ?
+
+Oui. Ce projet de créer une API pour le site web de Pronote est encore récent. Actuellement, l'API est déployé sur la plateforme Salesforce Heroku, toutefois, cela reste un MVC (Minimal Viable Product).
+
+L'API va donc être énormément updaté pendant ces prochains jours.
+
+
 
 
 
