@@ -31,7 +31,6 @@ const get_user_data = async(username, password, link) => {
         await login(page, username, password);
     } catch (error) {
         throw error;
-        return 'Error during login.'
     }
 
     console.log('logged in')
@@ -63,22 +62,24 @@ const get_user_average = async(page, username) => {
     await page.waitForSelector('#id_107id_64');
     await page.click('#id_107id_64');
 
-    // await page.waitForXPath('/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span');
     await page.waitFor(300);
 
     const user_average_element = await page.$x("/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span");
     let user_average = await page.evaluate(el => el.textContent, user_average_element[0]);
 
+    const class_average_element = await page.$x('/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[2]/span/span');
+    let class_average = await page.evaluate(el => el.textContent, class_average_element[0]);
+
     let user_average_parsed = user_average.substring(0, user_average.length - 4);
+    let class_average_parsed = class_average.substring(0, user_average.length - 4);
 
-    console.log(chalk.green(`Average retrieved from ${username} (` + chalk.red.bold(`${user_average_parsed}/20`) + `)...`));
-
-    let user_average_parsed_object = {};
-    user_average_parsed_object['Moyenne Générale'] = user_average_parsed;
+    let average_parsed_object = {};
+    average_parsed_object['Moyenne Générale Eleve'] = user_average_parsed;
+    average_parsed_object['Moyenne Génrale Classe'] = class_average_parsed;
 
     console.log(chalk.yellow('End of process.'));
 
-    return user_average_parsed_object;
+    return average_parsed_object;
 }
 
 const get_user_grades = async(page, username) => {
