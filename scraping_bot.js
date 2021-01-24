@@ -30,6 +30,7 @@ const get_user_data = async(username, password, link) => {
     try {
         await login(page, username, password);
     } catch (error) {
+        console.log('error during loging');
         throw error;
     }
 
