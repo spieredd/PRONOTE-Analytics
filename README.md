@@ -1,7 +1,7 @@
 # PRONOTE-API
 ## API non-officiel pour le site Pronote
 
-### Comment utiliser l'API ?
+## Comment utiliser l'API ?
 
 Afin d'utiliser cette API Pronote, faites simplement une 
 ```GET```
@@ -13,7 +13,7 @@ Si vous rentrez bien les bon paramètres, une réponse contenant un fichier JSON
 
 (Le fichier JSON envoyé est pour l'instant assez peu fourni. Toutefois, pas d'inquiétudes il sera bientôt complet)
 
-### Vous ne souhaitez pas que vos mots de passe et identifiant passe par nos serveurs ? Pas de problème !
+## Vous ne souhaitez pas que vos mots de passe et identifiant passe par nos serveurs ? Pas de problème !
 
 ( Je vous assure tout de même qu'aucune donnée que ce soit mots de passe, identifiants, notes... n'est sauvegardez. Gardez à l'esprit que nos serveurs heroku sont directement connectés à la branche 
 ```main```
