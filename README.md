@@ -15,7 +15,9 @@ Exemple ici (les données sensitives sont cachées par des rectangles rouges):
 
 Si vous rentrez bien les bon paramètres, une réponse contenant un fichier JSON vous sera renvoyé. Ce dernier possèdera un grand nombre de données (notes, moyennes, punitions, devoirs...).
 
-(Le fichier JSON envoyé est pour l'instant assez peu fourni. Toutefois, pas d'inquiétudes il sera bientôt complet)
+Si jamais vous ne rentrez pas tout les paramètres ou de mauvais paramètres alors il devrait s'affichait une page comme celle-ci:
+
+![demo error image](./images/error.png)
 
 ## Mes données (mot de passe, identifiant...) sont-ils enregistrées quelque part ?
 
