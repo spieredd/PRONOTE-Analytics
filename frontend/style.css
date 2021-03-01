@@ -1,46 +1,64 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+
+html,
 body {
-    font-size: 16px;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(233, 233, 233);
-    font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-color: #111d5e;
 }
 
-main {
-    width: 100%;
-    height: 30vh;
-    display: flex;
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin form{
+    display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
-    align-items: flex-start;
+    align-items: center;
 }
 
-h1 {
-    font-weight: 600;
-    font-size: 2rem;
-    color: #ef4f4f;
+.form-signin h1, #remember-me{
+    color:#fff;
 }
 
-h2 {
-    font-weight: 400;
-    font-size: 1rem;
+.form-signin .checkbox {
+  font-weight: 400;
 }
 
-p {
-    font-size: 1rem;
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
 }
 
-.code {
-    font-size: 0.8rem;
-    background-color: #0a043c;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+.form-signin .form-floating{
+    width:100%;
 }
+
+button, input{
+    border:none;
+}
+
+.btn{
+    background-color: #c70039;
+    border:none;
+    color:#fff;
+}
+
+.btn:hover{
+    background-color: #a50432;
+    color:#fff;
+}
+
+

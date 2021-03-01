@@ -34,9 +34,15 @@ const get_user_data = async(username, password, link) => {
         throw error;
     }
 
-    console.log('logged in')
+    console.log('logged in');
 
-    const average = await get_user_average(page, username);
+    //const average = await get_user_average(page, username);
+    const average=20;
+
+    await page.waitForSelector('#id_107id_64');
+    await page.click('#id_107id_64');
+
+    await page.waitFor(300);
 
     const averages = {};
     averages['Moyennes Matières Elève'] = await get_user_grades(page, username);
@@ -52,12 +58,12 @@ const login = async(page, username, password) => {
     await page.type('input[type=text]', username);
     await page.type('input[type=password]', password);
 
-    console.log('ok')
-
     await page.click('#id_39');
 
     console.log(chalk.greenBright(`Logged in with ${username} account...`));
 }
+
+module.exports = login;
 
 const get_user_average = async(page, username) => {
     console.log(chalk.yellowBright('Starting new process...'));
