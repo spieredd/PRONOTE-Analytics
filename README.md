@@ -1,4 +1,4 @@
-# PRONOTE-API 📈 📈 📈
+# PRONOTE-Analytics 📈 📈 📈
 ## API non-officiel pour le site Pronote
 
 ## Comment utiliser l'API ?
