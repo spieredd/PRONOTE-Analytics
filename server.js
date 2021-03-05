@@ -1,6 +1,8 @@
 const express = require('express');
 const chalk = require('chalk');
 const router = require('./router');
+const mongoose = require('mongoose');
+const user_average_database = require("./model");
 
 const app = express();
 
@@ -13,6 +15,19 @@ app.use(router);
 const get_user_data = require('./bot');
 
 const PORT = process.env.PORT || 3000;
+
+let uri = `mongodb+srv://admin:${process.env.DATABASE_PASSWORD}@cluster0.gnlov.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+
+mongoose.connect(uri,{
+    useUnifiedTopology: true,
+    useNewUrlParser: true 
+});
+
+const connection = mongoose.connection;
+
+connection.once("open", () => {
+  console.log("MongoDB database connection established successfully");
+});
 
 app.get('/api', (req, res) => {
     let username = process.env.PRONOTE_USERNAME;
