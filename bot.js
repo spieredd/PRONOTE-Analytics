@@ -24,6 +24,10 @@ const get_user_data = async(username, password, link) => {
 
     await page.goto(link);
     await page.waitForSelector('input[type=text]');
+    await page.waitForSelector('#id_39');
+
+    console.log('Selector appeared');
+
 
     console.log(chalk.greenBright('On pronote...'));
 
