@@ -14,7 +14,7 @@ const get_user_data = async(username, password, link) => {
     console.log(chalk.yellowBright('API GET method...'));
 
     const browser = await puppeteer.launch({
-        headless: true,
+        headless: false,
         args: ['--no-sandbox']
     });
 
@@ -125,6 +125,7 @@ const get_user_grades = async(page, username) => {
         try {
             subject_average_grade = await page.evaluate(el => el.textContent, subject_average_grade_xpath[0]);
         } catch (e) {
+            console.log(e);
             continue;
         }
 
