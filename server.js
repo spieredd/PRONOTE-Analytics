@@ -30,13 +30,13 @@ connection.once("open", () => {
 });
 
 app.get('/api', (req, res) => {
-    let username = process.env.PRONOTE_USERNAME;
-    let password = process.env.PRONOTE_PASSWORD;
-    let link = process.env.PRONOTE_LINK;
+    // let username = process.env.PRONOTE_USERNAME;
+    // let password = process.env.PRONOTE_PASSWORD;
+    // let link = process.env.PRONOTE_LINK;
 
-    //const username = req.query.username;
-    //const password = req.query.password;
-    //const link = req.query.link;
+    const username = req.query.username;
+    const password = req.query.password;
+    const link = req.query.link;
 
     if (username && password && link) {
         get_user_data(username, password, link)
