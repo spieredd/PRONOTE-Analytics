@@ -14,7 +14,7 @@ const get_user_data = async(username, password, link) => {
     console.log(chalk.yellowBright('API GET method...'));
 
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         args: ['--no-sandbox']
     });
 
