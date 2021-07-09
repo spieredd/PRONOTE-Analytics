@@ -19,7 +19,7 @@ Si jamais vous ne rentrez pas tout les paramètres ou de mauvais paramètres alo
 
 ![demo error image](./images/error.png)
 
-## Mes données (mot de passe, identifiant...) sont-ils enregistrées quelque part ?
+## Mes données (mot de passe, identifiant...) sont-elles enregistrées quelque part ?
 
 Non. Pour l'instant aucune donnée n'est enregistrée. Vous pouvez aller le code de la branche 
 ```main``` si vous en êtes pas sûr. Cette dernière est en effet directement connectée à notre serveur Heroku.
